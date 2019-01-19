@@ -1,8 +1,8 @@
 language: dart
 os:
   - linux
-dart:
-  - 2.1.0
+# dart:
+#   - 2.1.0
 addons:
   chrome: stable
   apt:
