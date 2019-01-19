@@ -20,6 +20,11 @@ script:
   - flutter packages get
   # - pub run test_coverage
   - dartanalyzer /lib
-# cache:
-#   directories:
-#     - $HOME/.pub-cache
+deploy:
+  provider: script
+  script: ./.travis/publish.sh
+  on:
+    tags: true
+cache:
+  directories:
+    - $HOME/.pub-cache
