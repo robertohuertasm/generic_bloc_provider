@@ -1,4 +1,4 @@
-# language: dart
+language: dart
 os:
   - linux
 dart:
@@ -13,12 +13,12 @@ addons:
       - fonts-droid
 before_script:
   - git clone https://github.com/flutter/flutter.git -b master --depth 1
-  - ./flutter/bin/flutter doctor
+  # - ./flutter/bin/flutter doctor
 script:
   - ./flutter/bin/flutter packages get
   # - pub run test_coverage
-  # - dartanalyzer /lib
-  # - pub publish --dry-run
+  - dartanalyzer /lib
+  - pub publish --dry-run
 deploy:
   provider: script
   script: ./.travis/publish.sh
