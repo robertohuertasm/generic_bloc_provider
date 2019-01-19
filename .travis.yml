@@ -1,0 +1,24 @@
+language: dart
+os:
+  - linux
+sudo: required
+dart:
+  - 2.1.0
+addons:
+  chrome: stable
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - libstdc++6
+      - fonts-droid
+before_script:
+  - git clone https://github.com/flutter/flutter.git -b master --depth 1
+  - ./flutter/bin/flutter doctor
+script:
+  - pub get
+  # - pub run test_coverage
+  - dartanalyzer /lib
+cache:
+  directories:
+    - $HOME/.pub-cache
