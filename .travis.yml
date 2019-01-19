@@ -20,6 +20,7 @@ script:
   - flutter packages get
   # - pub run test_coverage
   - dartanalyzer /lib
+  - pub publish --dry-run
 deploy:
   provider: script
   script: ./.travis/publish.sh
