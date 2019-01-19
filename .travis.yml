@@ -13,7 +13,7 @@ addons:
       - fonts-droid
 before_script:
   - git clone https://github.com/flutter/flutter.git -b master --depth 1
-  # - ./flutter/bin/flutter doctor
+  - ./flutter/bin/flutter doctor
 script:
   - ./flutter/bin/flutter packages get
   # - pub run test_coverage
