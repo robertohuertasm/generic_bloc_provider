@@ -1,4 +1,4 @@
-language: dart
+# language: dart
 os:
   - linux
 # dart:
@@ -11,10 +11,13 @@ addons:
     packages:
       - libstdc++6
       - fonts-droid
+      - apt-transport-https
+      - dart
 before_script:
   - git clone https://github.com/flutter/flutter.git -b master --depth 1
   - ./flutter/bin/flutter doctor
 script:
+  - export PATH="$PATH:/usr/lib/dart/bin"
   - ./flutter/bin/flutter packages get
   # - pub run test_coverage
   - dartanalyzer /lib
