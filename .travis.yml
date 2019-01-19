@@ -1,8 +1,8 @@
 language: dart
 os:
   - linux
-sudo: required
-dist: trusty
+# sudo: required
+# dist: trusty
 dart:
   - 2.1.0
 addons:
@@ -17,10 +17,11 @@ before_script:
   - git clone https://github.com/flutter/flutter.git -b master --depth 1
   - ./flutter/bin/flutter doctor
 script:
-  - flutter packages get
+  - echo "Script!!"
+  # - flutter packages get
   # - pub run test_coverage
-  - dartanalyzer /lib
-  - pub publish --dry-run
+  # - dartanalyzer /lib
+  # - pub publish --dry-run
 deploy:
   provider: script
   script: ./.travis/publish.sh
