@@ -16,7 +16,7 @@ before_script:
   - git clone https://github.com/flutter/flutter.git -b master --depth 1
   - ./flutter/bin/flutter doctor
 script:
-  - pub get
+  - flutter packages get
   # - pub run test_coverage
   - dartanalyzer /lib
 cache:
