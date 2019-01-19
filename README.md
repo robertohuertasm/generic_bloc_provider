@@ -1,5 +1,7 @@
 # generic_bloc_provider
 
+[![Build Status](https://travis-ci.com/robertohuertasm/generic_bloc_provider.svg?branch=master)](https://travis-ci.com/robertohuertasm/generic_bloc_provider)
+
 A generic BloC Provider for your Flutter apps.
 
 ## Getting Started
