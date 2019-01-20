@@ -10,7 +10,7 @@ All your BloCs must extend the `Bloc` abstract class. This means that all of the
 
 In this method, you should take care of closing all the `sinks` and resources.
 
-[Example](example/example.dart) of how to use it:
+[Example](lib/example.dart) of how to use it:
 
 ```dart
 void main() => runApp(MyApp());
