@@ -12,3 +12,6 @@ build/
 ios/.generated/
 ios/Flutter/Generated.xcconfig
 ios/Runner/GeneratedPluginRegistrant.*
+
+example/pubspec.lock
+example/.packages
