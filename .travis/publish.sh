@@ -10,5 +10,7 @@ cat <<EOF > ~/.pub-cache/credentials.json
   "expiration":$expiration
 }
 EOF
-
+echo $pwd
+ls -la
+echo "Let's publish this!"
 pub publish -f

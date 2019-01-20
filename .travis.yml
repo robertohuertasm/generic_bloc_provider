@@ -19,16 +19,18 @@ before_script:
   - export PATH=`pwd`/flutter/bin:`pwd`/flutter/bin/cache/dart-sdk/bin:$PATH
   - flutter doctor
   # - pub global activate flutter_plugin_tools
-before_deploy:
-  - rm -rf flutter
 script:
   - flutter packages get
   # - flutter test
   - flutter analyze --no-pub --no-current-package lib
   - pub publish --dry-run
+before_deploy:
+  - rm -rf flutter
+  - chmod +x ./.travis/publish.sh
 deploy:
   provider: script
-  script: ./.travis/publish.sh
+  skip_cleanup: true
+  script: './.travis/publish.sh'
   on:
     tags: true
 cache:
