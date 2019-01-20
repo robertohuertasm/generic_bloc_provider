@@ -1,6 +1,6 @@
 # generic_bloc_provider
 
-[![Build Status](https://travis-ci.org/robertohuertasm/generic_bloc_provider.svg?branch=master)](https://travis-ci.org/robertohuertasm/generic_bloc_provider) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/robertohuertasm/generic_bloc_provider.svg?branch=master)](https://travis-ci.org/robertohuertasm/generic_bloc_provider) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Pub](https://img.shields.io/pub/v/generic_bloc_provider.svg)](https://pub.dartlang.org/packages/generic_bloc_provider)
 
 A generic BloC Provider for your Flutter apps.
 
