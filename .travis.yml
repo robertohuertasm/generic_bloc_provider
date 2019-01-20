@@ -1,21 +1,29 @@
 language: dart
+dart:
+  - stable
 os:
   - linux
-dart:
-  - 2.1.0
+sudo: false
 addons:
-  chrome: stable
+  # chrome: stable
   apt:
     sources:
       - ubuntu-toolchain-r-test
     packages:
       - libstdc++6
       - fonts-droid
+install:
+  -
 before_script:
-  - git clone https://github.com/flutter/flutter.git -b master --depth 1
-  - ./flutter/bin/flutter doctor
+  # - git clone https://github.com/flutter/flutter.git -b master --depth 1
+  # - ./flutter/bin/flutter doctor
+  - git clone https://github.com/flutter/flutter.git
+  - export PATH=`pwd`/flutter/bin:`pwd`/flutter/bin/cache/dart-sdk/bin:$PATH
+  - flutter doctor
+  - pub global activate flutter_plugin_tools
 script:
-  - ./flutter/bin/flutter packages get
+  # - ./flutter/bin/flutter packages get
+  - flutter packages get
   # - pub run test_coverage
   - dartanalyzer /lib
   - pub publish --dry-run

@@ -1,6 +1,6 @@
 name: generic_bloc_provider
 description: A generic BloC Provider for your Flutter apps. This package will help you avoid the boilerplate of writing BloC Providers.
-version: 1.0.2
+version: 1.0.3
 author: Roberto Huertas <roberto.huertas@outlook.com>
 homepage: https://github.com/robertohuertasm/generic_bloc_provider
 
