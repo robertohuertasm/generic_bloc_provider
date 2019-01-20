@@ -22,7 +22,7 @@ before_script:
 script:
   - flutter packages get
   # - flutter test
-  - flutter analyze --current-package
+  - flutter analyze --no-pub --no-current-package lib
   - pub publish --dry-run
 deploy:
   provider: script
