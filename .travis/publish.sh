@@ -10,5 +10,5 @@ cat <<EOF > ~/.pub-cache/credentials.json
   "expiration":$expiration
 }
 EOF
-rm -rf flutter
+
 pub publish -f

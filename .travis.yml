@@ -19,6 +19,8 @@ before_script:
   - export PATH=`pwd`/flutter/bin:`pwd`/flutter/bin/cache/dart-sdk/bin:$PATH
   - flutter doctor
   # - pub global activate flutter_plugin_tools
+before_deploy:
+  - rm -rf flutter
 script:
   - flutter packages get
   # - flutter test
