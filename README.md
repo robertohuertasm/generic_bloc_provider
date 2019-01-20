@@ -6,7 +6,7 @@ A generic BloC Provider for your Flutter apps.
 
 ## Getting Started
 
-All your BloCs must extend the `Bloc` abstract class. This means that all of them should have a `dispose` function that will be executed whenever the life of the BloC comes to an end.
+All your BloCs must extend the `Bloc` abstract class. This means that all of them should have a `dispose` method that will be executed whenever the life of the BloC comes to an end.
 
 In this method, you should take care of closing all the `sinks` and resources.
 
@@ -55,13 +55,13 @@ class MainPage extends StatelessWidget {
 
 The `BlocProvider` class depends on `InheritedWidget`. Whenever you want to get your `BloC`, you can decide wether to attach the context of your widget to the `InheritedWidget` or not.
 
-In order to control this behavior, the static method `of` has a boolean optional argument (which is true by default) deciding if your context will be attached or not.
+In order to control this behavior, the static method `of` has an optional boolean argument (which is true by default) which determines wether your context will be attached or not.
 
-Basically, if you don't provide it or you just set it to `true`, [inheritFromWidgetOfExactType](https://docs.flutter.io/flutter/widgets/BuildContext/inheritFromWidgetOfExactType.html) will be used. If you set it to `false` then [ancestorInheritedElementForWidgetOfExactType](https://docs.flutter.io/flutter/widgets/BuildContext/ancestorInheritedElementForWidgetOfExactType.html) will be used instead
+Basically, if you don't provide it or you just set it to `true`, [inheritFromWidgetOfExactType](https://docs.flutter.io/flutter/widgets/BuildContext/inheritFromWidgetOfExactType.html) will be used. If you set it to `false` then [ancestorInheritedElementForWidgetOfExactType](https://docs.flutter.io/flutter/widgets/BuildContext/ancestorInheritedElementForWidgetOfExactType.html) will be used instead.
 
 ## Customizing the update policy
 
-If you want to change the way `updateShouldNotify` behaves you just have the option to provide a custom function to the `BlocProvider` constructor.
+If you want to change the way `updateShouldNotify` behaves you have the option to provide a custom anonymous function to the `BlocProvider` constructor.
 
 You will notice that there's an argument called `updateShouldNotifyOverride` which accepts a function receiving a `BloC` and the internal `InheritedWidget`:
 
