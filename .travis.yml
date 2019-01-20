@@ -20,9 +20,8 @@ before_script:
   - flutter doctor
   # - pub global activate flutter_plugin_tools
 script:
-  - flutter packages get
+  - flutter analyze --no-current-package lib
   # - flutter test
-  - flutter analyze --no-pub --no-current-package lib
   - pub publish --dry-run
 before_deploy:
   - rm -rf flutter
