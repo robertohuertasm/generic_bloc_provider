@@ -1,4 +1,8 @@
-## [1.0.7] - 2019-01-20
+## [1.0.9] - 2019-04-26
+
+- Connect BlocProvider's updateShouldNotifyOverride with its state.
+
+## [1.0.8] - 2019-01-20
 
 - Fix deployment script.
 
