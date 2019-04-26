@@ -26,7 +26,11 @@ class BlocProvider<T extends Bloc> extends StatefulWidget {
 class _BlocProviderState<T extends Bloc> extends State<BlocProvider<T>> {
   @override
   Widget build(BuildContext context) {
-    return _BlocProvider(bloc: widget.bloc, child: widget.child);
+    return _BlocProvider(
+      bloc: widget.bloc,
+      child: widget.child,
+      updateShouldNotifyOverride: widget.updateShouldNotifyOverride,
+    );
   }
 
   @override
