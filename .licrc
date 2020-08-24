@@ -1,0 +1,12 @@
+[licenses]
+# this will indicate which are the only licenses that privateer will accept. The rest will be flagged as not allowed.
+accepted = ["MIT", "MSC", "BSD"]
+# this will indicate which licenses are not accepted. The rest will be accepted, except for the unknown licenses or unlicensed dependencies.
+# unaccepted = ["LGPL"]
+
+[dependencies]
+# this will allow users to flag some dependencies so that privateer will not check for their license.
+ignored = ["amdefine", "ignored_dep2"]
+# this flag will always execute the check no matter if a dependency file has changed.
+always_run = true
+do_not_block = false
