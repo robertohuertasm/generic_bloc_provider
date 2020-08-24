@@ -1,6 +1,6 @@
 [licenses]
 # this will indicate which are the only licenses that privateer will accept. The rest will be flagged as not allowed.
-accepted = ["MIT", "MSC", "BSD"]
+accepted = ["MIT", "MSC", "BSD", "BSD-3-Clause"]
 # this will indicate which licenses are not accepted. The rest will be accepted, except for the unknown licenses or unlicensed dependencies.
 # unaccepted = ["LGPL"]
 
