@@ -10,3 +10,4 @@ ignored = ["amdefine", "ignored_dep2"]
 # this flag will always execute the check no matter if a dependency file has changed.
 always_run = true
 do_not_block = false
+
