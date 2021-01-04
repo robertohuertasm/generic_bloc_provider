@@ -57,7 +57,7 @@ The `BlocProvider` class depends on `InheritedWidget`. Whenever you want to get 
 
 In order to control this behavior, the static method `of` has an optional boolean argument (which is true by default) which determines wether your context will be attached or not.
 
-Basically, if you don't provide it or you just set it to `true`, [inheritFromWidgetOfExactType](https://docs.flutter.io/flutter/widgets/BuildContext/inheritFromWidgetOfExactType.html) will be used. If you set it to `false` then [ancestorInheritedElementForWidgetOfExactType](https://docs.flutter.io/flutter/widgets/BuildContext/ancestorInheritedElementForWidgetOfExactType.html) will be used instead.
+Basically, if you don't provide it or you just set it to `true`, [dependOnInheritedWidgetOfExactType](https://docs.flutter.io/flutter/widgets/BuildContext/dependOnInheritedWidgetOfExactType.html) will be used. If you set it to `false` then [getElementForInheritedWidgetOfExactType](https://docs.flutter.io/flutter/widgets/BuildContext/getElementForInheritedWidgetOfExactType.html) will be used instead.
 
 ## Customizing the update policy
 

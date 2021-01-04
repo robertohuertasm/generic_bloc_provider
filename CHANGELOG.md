@@ -1,3 +1,8 @@
+## [1.1.0] - 2021-01-04
+
+- Fix deprecated api usage.
+- Update documentation.
+
 ## [1.0.9] - 2019-04-26
 
 - Connect BlocProvider's updateShouldNotifyOverride with its state.

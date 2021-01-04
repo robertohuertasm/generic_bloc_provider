@@ -27,11 +27,23 @@ class MainPage extends StatelessWidget {
     final appBloc = BlocProvider.of<AppBloc>(context);
     return Scaffold(
       body: SafeArea(
-        child: StreamBuilder(
-          stream: appBloc.text$,
-          builder: (context, AsyncSnapshot<String> snapshot) {
-            return Text(snapshot.hasData ? snapshot.data : 'loading');
-          },
+        child: Column(
+          children: [
+            StreamBuilder(
+              stream: appBloc.text$,
+              builder: (context, AsyncSnapshot<String> snapshot) {
+                return Text(
+                    snapshot.hasData ? snapshot.data ?? 'no data' : 'loading');
+              },
+            ),
+            FlatButton(
+              onPressed: () {
+                var time = DateTime.now().toUtc().toIso8601String();
+                appBloc.text.add('Pressed at $time');
+              },
+              child: Text('PRESS THIS'),
+            )
+          ],
         ),
       ),
     );
