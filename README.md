@@ -75,6 +75,6 @@ This is the default implementation of the `updateShouldNotify` method:
 @override
   bool updateShouldNotify(_BlocProvider oldWidget) =>
       updateShouldNotifyOverride != null
-          ? updateShouldNotifyOverride(bloc, oldWidget)
+          ? updateShouldNotifyOverride!(bloc, oldWidget)
           : oldWidget.bloc != bloc;
 ```

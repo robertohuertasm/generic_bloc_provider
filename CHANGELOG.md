@@ -1,3 +1,8 @@
+
+## [2.0.0-nullsafety.0] - 2021-01-04
+
+- Migrate the package to null-safety
+
 ## [1.1.0] - 2021-01-04
 
 - Fix deprecated api usage.

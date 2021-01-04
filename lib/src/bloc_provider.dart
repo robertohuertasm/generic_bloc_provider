@@ -12,7 +12,7 @@ class BlocProvider<T extends Bloc> extends StatefulWidget {
 
   /// The widget that the [BlocProvider] will wrap
   final Widget child;
-
+  
   /// Allows you to override the default update policy
   ///
   /// Default implementation:
@@ -24,7 +24,8 @@ class BlocProvider<T extends Bloc> extends StatefulWidget {
   ///           ? updateShouldNotifyOverride(bloc, oldWidget)
   ///           : oldWidget.bloc != bloc;
   /// ```
-  final UpdateShouldNotify<T> updateShouldNotifyOverride;
+  final UpdateShouldNotify<T>? updateShouldNotifyOverride;
+
 
   /// Builds a [BlocProvider].
   ///
@@ -42,9 +43,9 @@ class BlocProvider<T extends Bloc> extends StatefulWidget {
   ///           : oldWidget.bloc != bloc;
   /// ```
   BlocProvider({
-    Key key,
-    @required this.child,
-    @required this.bloc,
+    Key? key,
+    required this.child,
+    required this.bloc,
     this.updateShouldNotifyOverride,
   }) : super(key: key);
 
@@ -81,16 +82,18 @@ class _BlocProviderState<T extends Bloc> extends State<BlocProvider<T>> {
 class _BlocProvider<T extends Bloc> extends InheritedWidget {
   final T bloc;
   final Widget child;
-  final UpdateShouldNotify<T> updateShouldNotifyOverride;
+  final UpdateShouldNotify<T>? updateShouldNotifyOverride;
 
   _BlocProvider({
-    this.bloc,
-    this.child,
+    required this.bloc,
+    required this.child,
     this.updateShouldNotifyOverride,
   }) : super(child: child);
 
   static T of<T extends Bloc>(BuildContext context, bool attachContext) {
-    _BlocProvider<T> blocProvider;
+    final type = _typeOf<_BlocProvider<T>>();
+
+    _BlocProvider<T>? blocProvider;
 
     if (attachContext) {
       blocProvider =
@@ -116,6 +119,6 @@ class _BlocProvider<T extends Bloc> extends InheritedWidget {
   @override
   bool updateShouldNotify(_BlocProvider oldWidget) =>
       updateShouldNotifyOverride != null
-          ? updateShouldNotifyOverride(bloc, oldWidget)
+          ? updateShouldNotifyOverride!(bloc, oldWidget)
           : oldWidget.bloc != bloc;
 }
