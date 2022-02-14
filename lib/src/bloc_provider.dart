@@ -90,8 +90,6 @@ class _BlocProvider<T extends Bloc> extends InheritedWidget {
   }) : super(child: child);
 
   static T of<T extends Bloc>(BuildContext context, bool attachContext) {
-    final type = _typeOf<_BlocProvider<T>>();
-
     _BlocProvider<T>? blocProvider;
 
     if (attachContext) {
