@@ -1,3 +1,15 @@
+## [2.1.0] - 2022-02-14
+
+- Official null-safety release.
+
+## [2.0.0-nullsafety.1] - 2021-01-04
+
+- Document the API
+
+## [2.0.0-nullsafety.0] - 2021-01-04
+
+- Migrate the package to null-safety
+
 ## [1.1.0] - 2021-01-04
 
 - Fix deprecated api usage.
