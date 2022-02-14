@@ -1,0 +1,32 @@
+name: Build
+
+env:
+  FLUTTER_VERSION: "stable"
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Installing Flutter
+        uses: britannio/action-install-flutter@v1.1
+        with:
+          version: $FLUTTER_VERSION
+      - name: Installing dependencies
+        run: flutter pub get
+      - name: Analyze
+        run: flutter analyze --no-pub --no-current-package lib
+      - name: Running tests
+        run: flutter test --no-pub
+      - name: Publish --dry-run
+        run: flutter packages pub publish --dry-run
