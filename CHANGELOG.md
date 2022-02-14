@@ -1,3 +1,7 @@
+## [2.1.1] - 2022-02-14
+
+- Fix lint issue.
+
 ## [2.1.0] - 2022-02-14
 
 - Official null-safety release.
