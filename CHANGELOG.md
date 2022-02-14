@@ -1,6 +1,7 @@
 ## [2.1.0] - 2022-02-14
 
 - Official null-safety release.
+- Using GitHub actions instead of Travis
 
 ## [2.0.0-nullsafety.1] - 2021-01-04
 
